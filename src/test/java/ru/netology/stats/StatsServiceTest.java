@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StatsServiceTest {
 
-    private int [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+    private int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
     private StatsService service = new StatsService();
 
     @Test

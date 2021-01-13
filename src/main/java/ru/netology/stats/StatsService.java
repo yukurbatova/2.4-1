@@ -1,23 +1,23 @@
 package ru.netology.stats;
 
 public class StatsService {
-    public int calculateSum (int [] sales) {
-    int sum = 0;
-    for (int sale: sales) {
-        sum += sale;
-    }
-    return (sum);
-}
-
-    public int calculateAverage (int [] sales) {
-        int calculateSum = calculateSum (sales);
-        return (calculateSum / sales.length);
+    public int calculateSum(int[] sales) {
+        int sum = 0;
+        for (int sale : sales) {
+            sum += sale;
         }
+        return (sum);
+    }
 
-    public int calculateMonthIndexWithMaxSales (int [] sales) {
+    public int calculateAverage(int[] sales) {
+        int calculateSum = calculateSum(sales);
+        return (calculateSum / sales.length);
+    }
 
-        int max = sales [0];
-        for (int sale: sales) {
+    public int calculateMonthIndexWithMaxSales(int[] sales) {
+
+        int max = sales[0];
+        for (int sale : sales) {
             if (max < sale) {
                 max = sale;
             }
@@ -25,7 +25,7 @@ public class StatsService {
 
         int monthIndex = 0;
         int monthWithMax = 0;
-        for (int sale: sales) {
+        for (int sale : sales) {
             monthIndex += 1;
             if (sale == max) {
                 monthWithMax = monthIndex;
@@ -34,10 +34,10 @@ public class StatsService {
         return (monthWithMax);
     }
 
-    public int calculateMonthIndexWithMinSales (int [] sales) {
+    public int calculateMonthIndexWithMinSales(int[] sales) {
 
-        int min = sales [0];
-        for (int sale: sales) {
+        int min = sales[0];
+        for (int sale : sales) {
             if (min > sale) {
                 min = sale;
             }
@@ -45,7 +45,7 @@ public class StatsService {
 
         int monthIndex = 0;
         int monthWithMin = 0;
-        for (int sale: sales) {
+        for (int sale : sales) {
             monthIndex += 1;
             if (sale == min) {
                 monthWithMin = monthIndex;
@@ -57,9 +57,9 @@ public class StatsService {
     public int calculateMonthCountUnderAverage(int[] sales) {
         int average = calculateAverage(sales);
         int count = 0;
-        for (int sale: sales) {
+        for (int sale : sales) {
             if (sale < average) {
-                count+=1;
+                count += 1;
             }
         }
         return (count);
@@ -68,9 +68,9 @@ public class StatsService {
     public int calculateMonthCountOverAverage(int[] sales) {
         int average = calculateAverage(sales);
         int count = 0;
-        for (int sale: sales) {
+        for (int sale : sales) {
             if (sale > average) {
-                count+=1;
+                count += 1;
             }
         }
         return (count);
